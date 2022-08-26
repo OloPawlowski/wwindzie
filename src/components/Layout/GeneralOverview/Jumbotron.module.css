@@ -1,0 +1,29 @@
+.jumbo {
+  background-color: #e9ecef;
+  display: flex;
+  flex-direction: column;
+}
+.jumbo h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem;
+}
+.jumbo p {
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 0.5rem ;
+}
+@media(min-width: 40rem) {
+  .jumbo h1 {
+    font-size: 2.5rem;
+    text-align: left;
+    margin: 1rem 0 1rem 6rem;
+    padding: 0.5rem 5rem;
+  }
+  .jumbo p {
+    font-size: 2rem;
+    text-align: start;
+    margin: 0.5rem 0 3.5rem 6rem;
+    padding: 0 5rem;
+  }
+}

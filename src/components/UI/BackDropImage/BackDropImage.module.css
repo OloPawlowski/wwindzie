@@ -1,0 +1,12 @@
+.container {
+    background-image: url("../../../assets/Agencja-zeglarska-W-windzie-zachod.webp");
+    height: 740px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 0;
+    margin-bottom: -0.1rem;
+    /* filter: brightness(1.1); */
+    opacity: .7;
+}

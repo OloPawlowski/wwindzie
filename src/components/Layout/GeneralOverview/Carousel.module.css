@@ -1,0 +1,92 @@
+.section-carousel {
+  margin-top: 5.5rem;
+  margin-bottom: 0;
+  font-size: large;
+}
+.arrowR {
+  position: absolute;
+  top: 40%;
+  right: 1%;
+  font-size: 2.5rem;
+  color: white;
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+}
+.arrowL {
+  position: absolute;
+  top: 40%;
+  left: 1%;
+  font-size: 2.5rem;
+  color: white;
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+}
+.main-image {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  vertical-align: top;
+}
+.div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition-duration: 2s;
+  transform: scale(1.008);
+}
+.transform {
+    opacity: 0;
+    transition-duration: 1s ease;
+}
+.img {
+    height: 33vw;
+    width: 100%;
+}
+.title {
+  position: absolute;
+  width: 60%;
+  margin: auto;
+  top: 44%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  /* text-transform: uppercase; */
+  font-size: 1.4rem;
+  font-weight: 100;
+  font-stretch: ultra-condensed;
+}
+.sub-title {
+  display: none;
+}
+.jumbotron {
+  background-color: #e9ecef;
+  padding: 2rem;
+}
+.jumbotron h1 {
+  margin: 0;
+}
+@media (min-width: 40rem) {
+  .title {
+    position: absolute;
+    top: 58%;
+    font-size: 4rem;
+  }
+  .sub-title {
+    display: inline-flex;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 100;
+  }
+}

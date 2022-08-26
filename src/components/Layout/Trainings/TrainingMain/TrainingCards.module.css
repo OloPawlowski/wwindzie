@@ -1,0 +1,16 @@
+.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* background: #b45050; */
+}
+@media (min-width: 50rem) {
+    .cards {
+        width: 100%;
+        display: flex;
+        align-items: center;
+       flex-wrap: wrap;
+    }
+}

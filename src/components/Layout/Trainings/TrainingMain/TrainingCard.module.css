@@ -1,0 +1,45 @@
+.training-card__container {
+  position: relative;
+  /* width: 22%;  */
+  /* height: 100%; */
+  /* background-color: blue; */
+  /* text-align: right; */
+  /* margin-bottom: 2rem; */
+  /* text-align: justify; */
+    margin: 1rem ;
+    /* padding: 1rem; */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px -2px rgb(97, 95, 95);
+}
+.training-card__name {    
+  position: absolute;    
+  padding: 1.2rem;
+  margin-top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: rgb(255, 255, 255); 
+  
+}
+.container a {
+  text-decoration: none;
+  
+}
+.training-card__image__container {
+    margin: 0rem;
+    padding: 0rem;
+    width: 100%;
+}
+.training-card__image__container img {
+    width: 100%;
+    border-radius: 6px;
+    vertical-align: top;
+}
+@media (min-width: 50rem) {
+    .training-card__container {
+        width: 31%; 
+        height: 100%;
+        margin: 0.5rem ;
+      }
+}
+

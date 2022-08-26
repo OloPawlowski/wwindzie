@@ -1,0 +1,40 @@
+/* .article {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items:baseline;
+} */
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 90%;
+  margin: 3rem auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px -2px rgb(97, 95, 95);
+}
+.iconP {
+  vertical-align: bottom;
+  font-size: 1.2rem;
+  color: white;
+}
+.icon {
+  vertical-align: bottom;
+  font-size: larger;
+}
+.link {
+  background-color: rgb(22, 211, 5);
+  text-decoration: none;
+  border-radius: 50%;
+  border: solid 2px rgba(114, 113, 113, 0.171);
+  box-shadow: 0 2px 8px -2px rgb(97, 95, 95);
+  margin-left: 0;
+  margin-right: 0.6rem;
+  padding: 0.4rem;
+}
+@media (min-width: 60rem) {
+  .card {
+    width: 100%;
+    padding-left: 2rem;
+  }
+}

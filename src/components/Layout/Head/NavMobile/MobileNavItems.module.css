@@ -1,0 +1,19 @@
+.main-nav_items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.main-nav_item {
+  text-align: center;
+  border-bottom: solid 0.5px #e9ecef;
+  margin: 0;
+  padding: 0;
+  /* background-color: coral; */
+}
+.main-nav_item a {
+  display: block;
+  padding: 1rem;
+  margin: 0rem 1rem;
+  text-decoration: none;
+  color: black;
+}

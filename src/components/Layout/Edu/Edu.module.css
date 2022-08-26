@@ -1,0 +1,131 @@
+.quiz {
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  margin-top: 3rem;
+  /* background-color: blue; */
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 90%;
+  margin: 1rem auto;
+  /* background-color: #ff5200; */
+}
+.loading {
+  display: flex;
+  padding-top: 5rem;
+  padding-bottom: 18rem;
+}
+.loading p {
+  margin: auto;
+}
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 90%;
+  margin: 1rem auto;
+  /* background-color: aqua; */
+}
+.intro p {
+  text-align: center;
+}
+.numbers {
+  font-size: smaller;
+  text-align: right;
+  margin-right: 0rem;
+}
+.question {
+  background-color: white;
+  margin-bottom: 2rem;
+}
+.answer {
+  background-color: #e9ecef;
+  font-size: inherit;
+  padding: 0.6rem;
+  margin-bottom: 1.2rem;
+  border: solid 0.4px;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px -2px rgb(97, 95, 95);
+  color: black;
+}
+.answer:hover {
+  box-shadow: 0 0px 0px -2px rgb(97, 95, 95);
+}
+.answer:focus {
+  background-color: white;
+}
+.answer:disabled {
+  cursor: not-allowed;
+  box-shadow: 0 4px 10px -2px rgb(97, 95, 95);
+}
+.answerTrue {
+  background-color: #5ef705;
+  color: black;
+  font-size: inherit;
+  padding: 0.6rem;
+  margin-bottom: 1.2rem;
+  border: solid 1.4px green;
+  border-radius: 0.6rem;
+  cursor: not-allowed;
+  box-shadow: 0 4px 10px -2px rgb(97, 95, 95);
+}
+.button {
+  background-color: #1c75bc;
+  font-size: inherit;
+  color: white;
+  padding: 1rem;
+  margin: 0 0 3rem 0;
+  border: solid;
+  border-radius: 0.6rem;
+  box-shadow: 0 4px 10px -2px rgb(97, 95, 95);
+}
+.button:hover {
+  box-shadow: 0 2px 4px -2px rgb(97, 95, 95);
+}
+.buttonFinish {
+  background-color: #ff5200;
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 0 0 3rem 0;
+  border: solid;
+  border-radius: 0.6rem;
+  box-shadow: 0 4px 10px -2px rgb(97, 95, 95);
+}
+.buttonFinish:hover {
+  box-shadow: 0 2px 4px -2px rgb(97, 95, 95);
+}
+.result {
+  border: solid 0.4px black;
+  border-radius: 0.6rem;
+  margin: 3rem 1rem 20rem 1rem;
+  padding: 0rem 0.6em 2rem;
+  color: #ff5200;
+}
+.thumb-up {
+  color: green;
+  margin-left: 0.4rem;
+}
+.thumb-down {
+  color: red;
+  margin-left: 0.5rem;
+  vertical-align: bottom;
+}
+@media (min-width: 40rem) {
+  .quiz {
+    width: 70%;
+  }
+  .container {
+    width: 100%;
+    margin: 0rem auto;
+    /* background-color: aquamarine; */
+  }
+  .intro {
+    width: 60%;
+    margin: 1rem auto;
+    /* background-color: aqua; */
+  }
+}

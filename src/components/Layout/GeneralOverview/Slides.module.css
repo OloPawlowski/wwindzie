@@ -1,0 +1,51 @@
+.main-image {
+    position: relative;
+    display: flex;
+
+    /* justify-content: center;
+    align-items: center;  */
+    overflow: hidden;
+    vertical-align: top;  
+    
+    opacity: 1;
+    transition-duration: 2s ;
+    transform: scale(1.01);
+}
+.img {
+    height: 32vw;   
+}
+.transform {
+    opacity: 0;
+    transition-duration: 1s ease;
+} 
+.title {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 300;   
+}
+.arrowR {
+    position: absolute;
+    top: 40%;
+    right: 30px;
+    font-size: 2.5rem;
+    color: white;
+    z-index: 1;
+    cursor: pointer;
+    user-select: none;
+}
+.arrowL {
+    position: absolute;
+    top: 40%;
+    left: 30px;
+    font-size: 2.5rem;
+    color: white;
+    z-index: 1;
+    cursor: pointer;
+    user-select: none;
+}

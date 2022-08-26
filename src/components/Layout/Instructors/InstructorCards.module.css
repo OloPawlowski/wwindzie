@@ -1,0 +1,12 @@
+.instructors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+@media (min-width: 40rem) {
+  .instructors {
+    margin: 3rem auto;
+  }
+}

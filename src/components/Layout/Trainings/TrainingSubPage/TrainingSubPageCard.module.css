@@ -1,0 +1,41 @@
+.article {
+    text-align: justify;
+    margin: 1rem ;
+    /* padding: 1rem; */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px -2px rgb(97, 95, 95);
+    background-color: white;
+  }
+.article-header {
+  background-color: #f7f7f7;
+  text-align: center;
+  margin: 0;
+  border-bottom: solid 1px;
+}
+.article h4 {
+  background-color: #f7f7f7;
+
+  color: #ff5200;
+  text-align: center;
+  padding: 2rem;
+  margin: 0;
+}
+.article h5 {
+  text-align: center;
+  padding: 1rem;
+  margin: 0 auto;
+}
+.article_sub-container {
+  padding: 1rem;
+}
+.article_sub-container_photo img {
+ vertical-align: bottom;
+ border-bottom-left-radius: .5rem;
+ border-bottom-right-radius: .5rem;
+}
+  @media (min-width: 40rem) {
+    .article {
+      width: 30%;
+      margin: 0.5rem;
+    }
+}
