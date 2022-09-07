@@ -10,7 +10,7 @@ const NAVITEMS = [
   {
     id: '2',
     name: 'Szkolenie',
-    sub: '/szkolenie',
+    sub: '/szkolenie-zeglarskie',
   },
   {
     id: '3',
@@ -39,8 +39,7 @@ const NavItems = () => {
       <ul className={classes['main-nav__items']}>  
       {NAVITEMS.map((item) => (
         <li className={classes['main-nav__item']}  key={item.id} >
-          <NavLink 
-            activeClassName={classes.active} 
+          <NavLink className={navData => navData.isActive ? classes.active : ''}
             to={item.sub}
           >
             {item.name}

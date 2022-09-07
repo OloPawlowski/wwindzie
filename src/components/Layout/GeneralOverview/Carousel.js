@@ -8,6 +8,7 @@ import {
 } from 'react-icons/io';
 import Jumbotron from './Jumbotron';
 import classes from './Carousel.module.css';
+import React from 'react';
 
 const IMAGES = [
   {
@@ -31,23 +32,21 @@ const IMAGES = [
 ];
 
 const Carousel = () => {
-  
   const [current, setCurrent] = useState(0);
-  
+
   useEffect(() => {
     const slide = setTimeout(() => {
       setCurrent(current + 1);
-    }, 4400);    
+    }, 4400);
     return () => clearTimeout(slide);
-    
   }, [current]);
 
   if (current > IMAGES.length - 1) {
     setCurrent(0);
-  };
+  }
   if (current < 0) {
     setCurrent(2);
-  };
+  }
 
   const prevImage = () => {
     setCurrent(current - 1);
@@ -55,28 +54,32 @@ const Carousel = () => {
   const nextImage = () => {
     setCurrent(current + 1);
   };
-  const images = IMAGES.map((img, idx) => (          
-    <div key={idx} className={ classes[idx === current ? 'div' : 'transform']  }>
-        <h1 className={classes.title}>{img.title}</h1>
-        <h4 className={classes['sub-title']}>{img.sub}</h4>              
-        {current === idx && <img className={classes.img} src={img.image} alt={img.alt} />}
-      </div>
+  const images = IMAGES.map((img, idx) => (
+    <div key={idx} className={classes[idx === current ? 'div' : 'transform']}>
+      <h1 className={classes.title}>{img.title}</h1>
+      <h4 className={classes['sub-title']}>{img.sub}</h4>
+      {current === idx && (
+        <img className={classes.img} src={img.image} alt={img.alt} />
+      )}
+    </div>
   ));
   return (
+    <React.Fragment>
     <section className={classes['section-carousel']}>
       <div className={classes['main-image']}>
         <IoIosArrowDropleftCircle
           className={classes.arrowL}
           onClick={prevImage}
-          />
+        />
         <IoIosArrowDroprightCircle
           className={classes.arrowR}
           onClick={nextImage}
-          />
+        />
         {images}
       </div>
       <Jumbotron />
     </section>
+    </React.Fragment>
   );
 };
 export default Carousel;

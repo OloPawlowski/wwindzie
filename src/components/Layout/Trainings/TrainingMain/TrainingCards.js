@@ -10,10 +10,10 @@ const TRAININGS = [
     name: 'Indywidualny kurs na patent Żeglarza Jachtowego',
     img: patentImage,
     alt: 'woda lekko zafalowana',
-    link: '/szkolenie',
+    link: '/szkolenie-żeglarskie',
   },
-  { id: '2', name: 'Żeglarskie abc', img: abcImage, alt: 'widok z jachtu na mały port', link: '/szkolenie' },
-  { id: '3', name: 'Doszkalanie', img: doszkalanieImage, alt: 'widok z przechylonego jachtu', link: '/szkolenie' },
+  { id: '2', name: 'Żeglarskie abc', img: abcImage, alt: 'widok z jachtu na mały port', link: '/szkolenie-żeglarskie' },
+  { id: '3', name: 'Doszkalanie', img: doszkalanieImage, alt: 'widok z przechylonego jachtu', link: '/szkolenie-żeglarskie' },
 ];
 
 const TrainingCards = () => {

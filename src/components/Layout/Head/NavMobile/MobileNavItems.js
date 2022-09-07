@@ -8,7 +8,7 @@ const NAVITEMS = [
   },
   {
     name: 'Szkolenie',
-    sub: '/szkolenie',
+    sub: '/szkolenie-zeglarskie',
   },
   {
     name: 'Mazury',
@@ -33,7 +33,7 @@ const NavItems = (props) => {
   const navItems = NAVITEMS.map((item) => (
     <li className={classes['main-nav_item']} key={item.name}>
       <NavLink
-        activeClassName={classes.active}
+        className={(navData) => navData.isActive ? classes.active : '' }
         to={item.sub}
         onClick={props.hideNavMenu}
       >
