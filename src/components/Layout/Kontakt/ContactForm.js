@@ -52,7 +52,7 @@ const ContactForm = () => {
       .then(
         (response) => {
           console.log(response.status, response.text);
-          alert('wiadomość wysłana', response.text);
+          alert('Wiadomość została wysłana.', response.text);
         },
         (error) => {
           console.log(error.text, error);
@@ -131,6 +131,10 @@ const ContactForm = () => {
   );
 };
 export default ContactForm;
+
+
+
+
 
 
   // const [enteredName, setEnteredName] = useState('');

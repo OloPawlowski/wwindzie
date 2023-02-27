@@ -15,10 +15,10 @@ const Mazury = (props) => {
       </div>
       <div className={classes['mazury-photo']}>
           <h2 className={classes['mazury-photo_h']}>
-            zorganizuj rejs lub szkolenie
+            zorganizuj rejs lub szkolenie żeglarskie na mazurach
           </h2>
         <Link to="/rejsy-turystyczne-szkoleniowe-na-mazurach">
-          <img src={mazuryImage} alt="tralala" />
+          <img src={mazuryImage} alt="szkolenie żeglarskie na Mazurach" />
         </Link>
       </div>
     </article>

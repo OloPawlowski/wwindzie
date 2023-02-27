@@ -6,8 +6,7 @@ import WeatherPack from '../Layout/Weather/WeatherPack';
 const WeatherPage = (props) => {
     return(
 <React.Fragment>
-    <Template name='Sprawdź prognozę pogody' product={<WeatherPack />} />
-    
+    <Template name='Sprawdź prognozę pogody' product={<WeatherPack />} />    
 </React.Fragment>
     )
 }

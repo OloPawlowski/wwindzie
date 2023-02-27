@@ -19,13 +19,13 @@ const IMAGES = [
   },
   {
     title: 'REJSY TURYSTYCZNE',
-    sub: 'Mazury',
+    sub: 'na Mazurach',
     image: image2,
     alt: 'wyspa na jeziorze o zachodzie słońca',
   },
   {
     title: 'DOSZKALANIE',
-    sub: 'Mazury',
+    sub: 'na Mazurach, na Zalewie Zegrzyńskim',
     image: image3,
     alt: 'dwa jachty pod żaglami na jeziorze',
   },

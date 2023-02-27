@@ -48,7 +48,7 @@ const Footer = () => {
       <hr />
       <div className={classes.content}>
         <p>
-          <FaRegCopyright className={classes.icon} /> 2014-2022 Agencja
+          <FaRegCopyright className={classes.icon} /> 2014-2023 Agencja
           Żeglarska "W Windzie"
           <br />
           Wszelkie prawa zastrzeżone.

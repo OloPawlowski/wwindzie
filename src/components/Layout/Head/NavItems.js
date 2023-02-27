@@ -5,7 +5,7 @@ const NAVITEMS = [
   {
     id: '1',
     name: 'W Windzie',
-    sub: '/wwindzie',
+    sub: '/agencja-zeglarska-w-windzie',
   },
   {
     id: '2',
@@ -20,17 +20,17 @@ const NAVITEMS = [
   {
     id: '6',
     name: 'Edu.',
-    sub: '/edukacja',
+    sub: '/edukacja-zeglarska',
   },
   {
     id: '4',
     name: 'Pogoda',
-    sub: '/pogoda',
+    sub: '/zeglarska-prognoza-pogody',
   },
   {
     id: '5',
     name: 'Kontakt',
-    sub: '/kontakt',
+    sub: 'kontakt-Aleksander-Pawlowski',
   },
 ];
 
@@ -39,7 +39,8 @@ const NavItems = () => {
       <ul className={classes['main-nav__items']}>  
       {NAVITEMS.map((item) => (
         <li className={classes['main-nav__item']}  key={item.id} >
-          <NavLink className={navData => navData.isActive ? classes.active : ''}
+          <NavLink  
+          className={navData => navData.isActive ? classes.active : undefined}
             to={item.sub}
           >
             {item.name}

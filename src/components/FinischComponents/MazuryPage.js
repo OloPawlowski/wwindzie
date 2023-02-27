@@ -6,7 +6,7 @@ import BackDropImage from '../UI/BackDropImage/BackDropImage';
 const MazuryPage = (props) => {
   return (
     <React.Fragment>
-      <Template name='Rejsy turystyczne i szkoleniowe' product={<MazurySubPage />} />
+      <Template name='Rejsy turystyczne i szkoleniowe na Mazurach' product={<MazurySubPage />} />
       <BackDropImage />
     </React.Fragment>
   );

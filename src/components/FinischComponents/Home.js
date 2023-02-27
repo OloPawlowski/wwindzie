@@ -10,10 +10,10 @@ const Home = (props) => {
   return (
     <React.Fragment>
       <Carousel />
-      <Template product={<Training />} />
-      <Template product={<Mazury />} />
+      <Template name='Kursy żeglarskie' product={<Training />} />
+      <Template name='Rejsy i szkolenia na Mazurach' product={<Mazury />} />
       <BackDropImage />
-      <Template product={<InstructorCards />} />
+      <Template name='Instruktor żeglarstawa' product={<InstructorCards />} />
     </React.Fragment>
   );
 };

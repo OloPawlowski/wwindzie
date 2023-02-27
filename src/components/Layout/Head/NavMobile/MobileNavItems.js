@@ -4,7 +4,7 @@ import classes from './MobileNavItems.module.css';
 const NAVITEMS = [
   {
     name: 'W Windzie',
-    sub: '/wwindzie',
+    sub: '/agencja-zeglarska-w-windzie',
   },
   {
     name: 'Szkolenie',
@@ -16,15 +16,15 @@ const NAVITEMS = [
   },
   {
     name: 'Edukacja',
-    sub: '/edukacja',
+    sub: '/edukacja-zeglarska',
   },
   {
     name: 'Pogoda',
-    sub: '/pogoda',
+    sub: '/zeglarska-prognoza-pogody',
   },
   {
     name: 'Kontakt',
-    sub: '/kontakt',
+    sub: '/kontakt-Aleksander-Pawlowski',
   },
 ];
 

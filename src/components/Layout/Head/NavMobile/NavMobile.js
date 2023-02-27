@@ -8,14 +8,14 @@ const NavMobile = (props) => {
   return (
     <Fragment>
       <Backdrop hideNavMenu={props.hideNavMenu}/>
-      <div className={classes['mob-drawer']}>      
+      <header className={classes['mob-drawer']}>      
         <div className={classes['icon-container']}>
             <AiOutlineCloseCircle className={classes.icon} onClick={props.hideNavMenu}/>
         </div>
         <nav className={classes['mob-nav']}>
           <NavItems hideNavMenu={props.hideNavMenu}/>
         </nav>
-      </div>
+      </header>
     </Fragment>
   );
 };

@@ -18,7 +18,7 @@ const WEATHERZEGRZE = [
   },
   {
     key: '1',
-    hreference: "http://new.meteo.pl/um/php/meteorogram_id_um.php?ntype=0u&id=2799",
+    hreference: "https://www.meteo.pl/um/php/meteorogram_id_um.php?ntype=0u&id=2799",
     alter: 'logo icm',
     photo: icmLogo,
   },

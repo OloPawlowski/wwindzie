@@ -28,8 +28,8 @@ const App = () => {
       {navMobileIsShow && <NavMobile hideNavMenu={hideNavMobile} />}
       <main>
         <Routes>
-          <Route path="/" element={<Navigate to="/wwindzie" />} />
-          <Route path="/wwindzie" element={<Home />} />
+          <Route path="/" element={<Navigate to="/agencja-zeglarska-w-windzie" />} />
+          <Route path="/agencja-zeglarska-w-windzie" element={<Home />} />
           <Route
             path="/szkolenie-zeglarskie"
             element={
@@ -43,10 +43,10 @@ const App = () => {
             path="/rejsy-turystyczne-szkoleniowe-na-mazurach"
             element={<MazuryPage />}
           />
-          <Route path="/pogoda" element={<WeatherPage />} />
-          <Route path="/kontakt" element={<ContactPage />} />
+          <Route path="/zeglarska-prognoza-pogody" element={<WeatherPage />} />
+          <Route path="/kontakt-Aleksander-Pawlowski" element={<ContactPage />} />
           <Route
-            path="/edukacja"
+            path="/edukacja-zeglarska"
             element={
               <Template
                 name="Sprawdź swoją świadomość żeglarską"
