@@ -44,10 +44,10 @@ const ContactForm = () => {
     }
     emailjs
       .sendForm(
-        'service_s69nvki',
-        'template_sja5ydr',
+        process.env.REACT_APP_SERVICE,
+        process.env.REACT_APP_TEMPLATE,
         event.target,
-        'Y_UibvL7H2OubUGyo'
+        process.env.REACT_APP_PASSWORD
       )
       .then(
         (response) => {

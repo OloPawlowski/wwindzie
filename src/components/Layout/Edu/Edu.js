@@ -16,9 +16,7 @@ const Edu = () => {
 
   useEffect(() => {
     const fetchQuestions = async () => {
-      const response = await fetch(
-        'https://wwindziequizdatabase-default-rtdb.firebaseio.com/questions/-N2H39eLruhAXJ4Yu5K5/0.json'
-      );
+      const response = await fetch( process.env.REACT_APP_FIREBASE);
       if (!response.ok) {
         throw new Error('cosik poszło nie tak jak trza');
       }
