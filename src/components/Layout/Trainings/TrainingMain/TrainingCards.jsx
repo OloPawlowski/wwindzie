@@ -1,3 +1,4 @@
+import React from 'react';
 import TrainingCard from './TrainingCard';
 import patentImage from '../../../../assets/Agencja-zeglarska-w-windzie-Aleksander-Pawlowski-nauka-zeglarstwa-1.webp';
 import abcImage from '../../../../assets/Agencja-zeglarska-w-windzie-Aleksander-Pawlowski-sternik-mazury-1.webp';

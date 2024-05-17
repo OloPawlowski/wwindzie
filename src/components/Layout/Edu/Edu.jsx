@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import classes from './Edu.module.css';
-import { FaThumbsDown, FaThumbsUp } from 'react-icons/fa';
+import React, { useState, useEffect } from "react";
+import classes from "./Edu.module.css";
+import { FaThumbsDown, FaThumbsUp } from "react-icons/fa";
 
 const Edu = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -14,11 +14,13 @@ const Edu = () => {
   const [idNum, setIdNum] = useState(4);
   const numberOfQuestion = current + 1;
 
+  const url = import.meta.env.VITE_REACT_APP_FIREBASE;
+
   useEffect(() => {
     const fetchQuestions = async () => {
-      const response = await fetch( process.env.REACT_APP_FIREBASE);
+      const response = await fetch(url);
       if (!response.ok) {
-        throw new Error('cosik poszło nie tak jak trza');
+        throw new Error("cosik poszło nie tak jak trza");
       }
       const responseData = await response.json();
       setQuestions(responseData);
@@ -56,32 +58,33 @@ const Edu = () => {
 
   let scorePercentage = (score / questions.length) * 100;
 
-  let comment = 'Zapraszamy na szkolenie';
+  let comment = "Zapraszamy na szkolenie";
   if (scorePercentage === 100)
     comment =
-      'Brawo! Lux! Świetnie! Graatuulaacjeee!!! Zapraszamy do współpracy! :)';
+      "Brawo! Lux! Świetnie! Graatuulaacjeee!!! Zapraszamy do współpracy! :)";
   else if (scorePercentage >= 90) {
-    comment = 'Bravo! Bardzo dobry wynik! Gratulacje! Masz dużą świadomość';
+    comment = "Bravo! Bardzo dobry wynik! Gratulacje! Masz dużą świadomość";
   } else if (scorePercentage >= 75) {
-    comment = 'Dobrze! zapraszamy na doszkalanie!';
+    comment = "Dobrze! zapraszamy na doszkalanie!";
   } else if (scorePercentage >= 50) {
-    comment = 'Nieźle! zapraszamy na doszkalanie!';
+    comment = "Nieźle! zapraszamy na doszkalanie!";
   }
 
   let changeColor = false;
-  let buttonText = 'kolejne pytanie';
+  let buttonText = "kolejne pytanie";
   if (numberOfQuestion === questions.length) {
-    buttonText = 'zobacz wynik';
+    buttonText = "zobacz wynik";
     changeColor = true;
   }
   const introduction = (
     <div className={classes.intro}>
       <p>
-        ...czy wiesz i rozumiesz jak zachowuje się jacht i dlaczego? Jakie siły
-        działają na niego i jakie są miedzy nimi zależności?
+        Czy wiesz i rozumiesz jak zachowuje się jacht i dlaczego?
+        <br /> Jakie siły działają na niego i jakie są miedzy nimi zależności?
         <br />
-        Niżej są pytania zwiazane z teorią żeglowania i manewrowania, dzięki
-        ktorym możesz zweryfikować i poszerzyć swoją wiedzę na ten temat.
+        Niżej są pytania zwiazane z teorią żeglowania i manewrowania,
+        <br /> dzięki ktorym możesz zweryfikować i poszerzyć swoją wiedzę na ten
+        temat.
         <br />
         Dla ułatwienia tylko jedna odpowiedź jest prawidłowa i ujawnia się na
         zielono.
@@ -94,16 +97,15 @@ const Edu = () => {
     if (result === true) {
       setIsAnswerTrue(true);
       setScore(score + 1);
-      console.log('isAnswerTrue', isAnswerTrue);
     }
   };
-  const thumbUp = <FaThumbsUp className={classes['thumb-up']} />;
-  const thumbDown = <FaThumbsDown className={classes['thumb-down']} />;
+  const thumbUp = <FaThumbsUp className={classes["thumb-up"]} />;
+  const thumbDown = <FaThumbsDown className={classes["thumb-down"]} />;
 
   const buttonInside = showButton && (
     <button
       className={!changeColor ? classes.button : classes.buttonFinish}
-      type="button"
+      type='button'
       onClick={nextQuestionHandler}
     >
       {buttonText}

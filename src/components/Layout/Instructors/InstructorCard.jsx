@@ -1,4 +1,5 @@
-// import {Fragment} from 'react';
+import React from 'react';
+import {Fragment} from 'react';
 import classes from './InstructorCard.module.css';
 
 const InstructorCard = (props) => {

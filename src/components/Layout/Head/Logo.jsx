@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import logoImage from '../../../assets/avatar2.png';
 import classes from './Logo.module.css';

@@ -1,3 +1,4 @@
+import React from 'react';
 import oloImage from '../../../assets/Agencja-zeglarska-W-Windzie-Aleksander-Pawlowski.webp';
 import InstructorCard from './InstructorCard';
 import classes from './InstructorCards.module.css';

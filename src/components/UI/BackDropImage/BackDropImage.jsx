@@ -1,3 +1,4 @@
+import React from 'react';
 import classes from './BackDropImage.module.css';
 
 const BackDropImage = props => {

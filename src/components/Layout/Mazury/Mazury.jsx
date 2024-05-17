@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import mazuryImage from '../../../assets/Agencja-zeglarska-w-windzie-Aleksander-Pawlowski-instruktor-zeglarstwa.webp';
 import classes from './Mazury.module.css';

@@ -1,3 +1,4 @@
+import React from 'react';
 import classes from './TrainingDescript.module.css';
 
 const TrainingDescript = (props) => {

@@ -1,3 +1,4 @@
+import React from 'react';
 import classes from './Toggler.module.css';
 
 const Toggler = props => {

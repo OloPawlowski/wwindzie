@@ -1,3 +1,4 @@
+import React from 'react';
 import classes from './TrainingSubPageCard.module.css';
 
 const TrainingSubPageCard = (props) => {

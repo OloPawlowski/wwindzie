@@ -1,3 +1,4 @@
+import React from 'react';
 import classes from './Template.module.css';
 
 const Template = (props) => {

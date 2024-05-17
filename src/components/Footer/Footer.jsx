@@ -1,3 +1,4 @@
+import React from 'react';
 import { FaFacebook } from 'react-icons/fa';
 //import { FaFacebookMessenger } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
@@ -48,7 +49,7 @@ const Footer = () => {
       <hr />
       <div className={classes.content}>
         <p>
-          <FaRegCopyright className={classes.icon} /> 2014-2023 Agencja
+          <FaRegCopyright className={classes.icon} /> 2014-2024 Agencja
           Żeglarska "W Windzie"
           <br />
           Wszelkie prawa zastrzeżone.
