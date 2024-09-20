@@ -59,13 +59,6 @@ const ContactForm = () => {
     resetEmailInput();
     resetContentInput();
   };
-  //   const nameInputClasses = nameInputHasError   //nameIsInvalid
-  //   ? 'form-control invalid'
-  //   : 'form-control';
-
-  // const emailInputClasses = emailInputHasError //emailIsInavalid
-  //   ? 'form-control invalid'
-  //   : 'form-control';
   return (
     <div className={classes["form-block"]}>
       <h4>napisz do nas:</h4>
@@ -81,7 +74,7 @@ const ContactForm = () => {
               onBlur={nameBlurHandler}
               value={enteredName}
             />
-            {nameInputHasError && ( //nameIsInvalid
+            {nameInputHasError && (
               <p className={classes.error}>proszę wpisz swoje imię</p>
             )}
           </div>
@@ -109,7 +102,7 @@ const ContactForm = () => {
               onBlur={contentBlurHandler}
               value={enteredContent}
             />
-            {contentInputHasError && ( //contentIsInvalid
+            {contentInputHasError && (
               <p className={classes.error}>proszę wpisz treść wiadomości</p>
             )}
           </div>
@@ -128,84 +121,3 @@ const ContactForm = () => {
   );
 };
 export default ContactForm;
-
-// const [enteredName, setEnteredName] = useState('');
-// const [nameTouched, setNameTouched] = useState(false);
-
-// const [enteredEmail, setEnteredEmail] = useState('');
-// const [emailTouched, setEmailTouched] = useState(false);
-
-// const [enteredContent, setEnteredContent] = useState('');
-// const [contentTouched, setContentTouched] = useState(false);
-
-// const nameIsValid = enteredName.trim() !== '';
-// const nameIsInvalid = !nameIsValid && nameTouched;
-
-// const emailIsValid = enteredEmail.includes('@') && enteredEmail.includes('.');
-// const emailIsInavalid = !emailIsValid && emailTouched;
-
-// const contentIsValid = enteredContent.trim() !== '';
-// const contentIsInvalid = !enteredContent && contentTouched;
-
-// let formIsValid = false;
-// if (nameIsValid && emailIsValid && contentIsValid) {
-//   formIsValid = true;
-// }
-
-// const nameChangeHandler = (event) => {
-//   setEnteredName(event.target.value);
-// };
-// const nameBlurHandler = (event) => {
-//   setNameTouched(true);
-// };
-// const emailChangeHandler = (event) => {
-//   setEnteredEmail(event.target.value);
-// };
-// const emailBlurHandler = (event) => {
-//   setEmailTouched(true);
-// };
-// const contentChangeHandler = (event) => {
-//   setEnteredContent(event.target.value);
-// };
-// const contentBlurHandler = (event) => {
-//   setContentTouched(true);
-// };
-
-// const SubmitHandler = (event) => {
-//   event.preventDefault();
-//   if (!nameIsValid) {
-//     return;
-//   }
-//   emailjs
-//     .sendForm(
-//       'service_s69nvki',
-//       'template_sja5ydr',
-//       event.target,
-//       'Y_UibvL7H2OubUGyo'
-//     )
-//     .then(
-//       (response) => {
-//         console.log(response.status, response.text);
-//         alert('wiadomość wysłana', response.text);
-//       },
-//       (error) => {
-//         console.log(error.text, error);
-//       }
-//     );
-
-// setEnteredName('');
-// setNameTouched(false);
-
-// setEnteredEmail('');
-// setEmailTouched(false);
-
-// setEnteredContent('');
-// setContentTouched(false);
-//};
-//   const nameInputClasses = nameInputHasError   //nameIsInvalid
-//   ? 'form-control invalid'
-//   : 'form-control';
-
-// const emailInputClasses = emailInputHasError //emailIsInavalid
-//   ? 'form-control invalid'
-//   : 'form-control';

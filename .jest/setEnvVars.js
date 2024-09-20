@@ -1,0 +1,4 @@
+process.env.VITE_REACT_APP_SERVICE=''
+process.env.VITE_REACT_APP_TEMPLATE=''
+process.env.VITE_REACT_APP_PASSWORD=''
+process.env.VITE_REACT_APP_FIREBASE= ''

@@ -1,7 +1,6 @@
 import React from 'react';
 import Template from '../UI/ProductTemplate/Template';
 import WeatherPack from '../Layout/Weather/WeatherPack';
-//import BackDropImage from '../UI/BackDropImage/BackDropImage';
 
 const WeatherPage = (props) => {
     return(

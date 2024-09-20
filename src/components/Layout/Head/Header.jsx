@@ -1,7 +1,6 @@
 import React from 'react';
 import Logo from './Logo';
 import Toggler from './Toggler';
-// import NavMobile from './NavMobile/NavMobile';
 import NavItems from './NavItems';
 import classes from './Header.module.css';
 
