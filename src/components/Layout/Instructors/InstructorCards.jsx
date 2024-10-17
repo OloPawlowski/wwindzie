@@ -9,7 +9,7 @@ const INSTRUCTORS = [
     name: 'Aleksander Olo Pawłowski',
     photo: oloImage,
     photoAlt: 'Alek.Pawłowski',
-    licence1: 'Instruktor (z powołania) Żeglarstwa IŻ PZŻ',
+    licence1: 'Instruktor Żeglarstwa IŻ PZŻ',
     licence2: 'Jachtowy Sternik Morski',
     licence3: 'Motorowodny Sternik Morski',
     description: '',
