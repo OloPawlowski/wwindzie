@@ -13,7 +13,7 @@ const Home = (props) => {
       <Template name='Kursy żeglarskie' product={<Training />} />
       <Template name='Rejsy i szkolenia na Mazurach' product={<Mazury />} />
       <BackDropImage />
-      <Template name='Instruktor żeglarstawa' product={<InstructorCards />} />
+      <Template name='Instruktor żeglarstwa' product={<InstructorCards />} />
     </React.Fragment>
   );
 };

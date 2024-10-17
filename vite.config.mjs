@@ -7,9 +7,6 @@ export default defineConfig(() => {
             host: '0.0.0.0',
             port: 3000,
           },
-    // server: {
-    //   open: true,
-    // },
     build: {
       outDir: 'build',
     },

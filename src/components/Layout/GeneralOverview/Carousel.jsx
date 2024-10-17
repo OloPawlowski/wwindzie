@@ -56,7 +56,7 @@ const Carousel = () => {
   };
   const images = IMAGES.map((img, idx) => (
     <div key={idx} className={classes[idx === current ? 'div' : 'transform']}>
-      <h1 className={classes.title}>{img.title}</h1>
+      <h2 className={classes.title}>{img.title}</h2>
       <h4 className={classes['sub-title']}>{img.sub}</h4>
       {current === idx && (
         <img className={classes.img} src={img.image} alt={img.alt} />

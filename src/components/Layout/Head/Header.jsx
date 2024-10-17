@@ -1,15 +1,15 @@
-import React from 'react';
-import Logo from './Logo';
-import Toggler from './Toggler';
-import NavItems from './NavItems';
-import classes from './Header.module.css';
+import React from "react";
+import Logo from "./Logo";
+import Toggler from "./Toggler";
+import NavItems from "./NavItems";
+import classes from "./Header.module.css";
 
 const Header = (props) => {
   return (
-    <header className={classes['main-header']}>
+    <header className={classes["main-header"]}>
       <Logo />
       <Toggler onShowMobileMenu={props.onShowMobileMenu} />
-      <nav className={classes['main-nav']}>
+      <nav className={classes["main-nav"]}>
         <NavItems />
       </nav>
     </header>
