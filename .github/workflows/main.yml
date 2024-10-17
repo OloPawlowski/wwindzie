@@ -32,6 +32,7 @@ jobs:
         port: 222
         source: "build/*"
         target: "/public_html/"
+        log-level: debug
    
     - name: Debug FTP connection
       run: |
