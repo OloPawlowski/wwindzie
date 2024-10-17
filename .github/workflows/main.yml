@@ -34,3 +34,11 @@ jobs:
         server-ftp-settings: passive
         timeout: 600000
     
+    - name: Debug FTP connection
+      run: |
+        echo "Attempting to connect to FTP server..."
+        ftp -n ${{ secrets.FTP_SERVER }} << EOF
+        user ${{ secrets.FTP_USERNAME }} ${{ secrets.FTP_PASSWORD }}
+        pwd
+        quit
+        EOF
