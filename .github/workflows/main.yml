@@ -30,7 +30,7 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}  
         port: 222
-        source: "build/*"
+        source: "build/."
         target: "/home/olnkgpdqnd/domains/wwindzie.pl/public_html"
         debug: true
    
