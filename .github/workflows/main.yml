@@ -32,4 +32,5 @@ jobs:
         local-dir: ./build/  
         server-dir: /public_html/
         server-ftp-settings: passive
+        timeout: 600000
     
