@@ -16,7 +16,7 @@ const Edu = () => {
 
   const [error, setError] = useState(null);
 
-  const url = import.meta.env.VITE_REACT_APP_BASE;
+  const url = import.meta.env.VITE_REACT_APP_DATABASE;
 
   // useEffect(() => {
   //   const fetchQuestions = async () => {
