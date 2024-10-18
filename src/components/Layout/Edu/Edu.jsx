@@ -17,6 +17,7 @@ const Edu = () => {
   const [error, setError] = useState(null);
 
   const url = import.meta.env.VITE_REACT_APP_DATABASE;
+  console.log(url)
 
   // useEffect(() => {
   //   const fetchQuestions = async () => {
@@ -35,6 +36,13 @@ const Edu = () => {
   // }, []);
   useEffect(() => {
     const fetchQuestions = async () => {
+      if (!url) {
+        console.error("URL jest niezdefiniowany. Sprawdź zmienną środowiskową VITE_REACT_APP_DATABASE.");
+        setError("Błąd konfiguracji: brak URL bazy danych");
+        setIsLoaded(true);
+        return;
+      }
+
       try {
         console.log("Próba pobrania danych z URL:", url);
         const response = await fetch(url);
@@ -43,7 +51,12 @@ const Edu = () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        const textData = await response.text(); 
+        const contentType = response.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+          throw new Error(`Nieoczekiwany typ zawartości: ${contentType}`);
+        }
+
+        const textData = await response.text();
         console.log("Otrzymane surowe dane:", textData);
 
         let jsonData;
