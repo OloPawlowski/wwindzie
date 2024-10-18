@@ -3,9 +3,9 @@ import classes from "./Edu.module.css";
 import { FaThumbsDown, FaThumbsUp } from "react-icons/fa";
 
 const Edu = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  // const [isLoaded, setIsLoaded] = useState(false);
   const [httpError, setHttpError] = useState(false);
-  const [questions, setQuestions] = useState([]);
+  // const [questions, setQuestions] = useState([]);
   const [current, setCurrent] = useState(0);
   const [showButton, setShowButton] = useState(false);
   const [score, setScore] = useState(0);
@@ -14,7 +14,11 @@ const Edu = () => {
   const [idNum, setIdNum] = useState(4);
   const numberOfQuestion = current + 1;
 
+  // const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
+  const [questions, setQuestions] = useState([]);
+  const [loadingState, setLoadingState] = useState('initial');
 
   const url = import.meta.env.VITE_REACT_APP_DATABASE;
 
