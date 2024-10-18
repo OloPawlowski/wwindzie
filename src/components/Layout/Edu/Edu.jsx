@@ -14,7 +14,7 @@ const Edu = () => {
   const [idNum, setIdNum] = useState(4);
   const numberOfQuestion = current + 1;
 
-  const url = import.meta.env.VITE_REACT_APP_FIREBASE;
+  const url = import.meta.env.VITE_REACT_APP_BASE;
 
   useEffect(() => {
     const fetchQuestions = async () => {
