@@ -33,14 +33,14 @@ const Edu = () => {
   //     setHttpError(error.message);
   //   });
   // }, []);
-
-
   useEffect(() => {
     const fetchQuestions = async () => {
+      setLoadingState('fetching');
       if (!url) {
         console.error("URL jest niezdefiniowany. Sprawdź zmienną środowiskową VITE_REACT_APP_DATABASE.");
         setError("Błąd konfiguracji: brak URL bazy danych");
         setIsLoaded(true);
+        setLoadingState('error');
         return;
       }
 
@@ -48,11 +48,15 @@ const Edu = () => {
         console.log("Próba pobrania danych z URL:", url);
         const response = await fetch(url);
         
+        setLoadingState('received response');
+
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const contentType = response.headers.get("content-type");
+        console.log("Otrzymany Content-Type:", contentType);
+
         if (!contentType || !contentType.includes("application/json")) {
           console.error("Nieoczekiwany typ zawartości:", contentType);
           const textData = await response.text();
@@ -64,21 +68,27 @@ const Edu = () => {
         console.log("Sparsowane dane JSON:", jsonData);
         setQuestions(jsonData);
         setIsLoaded(true);
+        setLoadingState('loaded');
       } catch (e) {
         console.error("Błąd podczas pobierania lub przetwarzania danych:", e);
         setError(e.message);
         setIsLoaded(true);
+        setLoadingState('error');
       }
     };
 
     fetchQuestions();
   }, [url]);
 
+  console.log("Stan komponentu:", { isLoaded, error, loadingState, questionsLength: questions.length });
+
   if (error) {
-    return <div>Błąd: {error}. Sprawdź konsolę przeglądarki po więcej informacji.</div>;
+    return <div>Błąd: {error}. Stan ładowania: {loadingState}. Sprawdź konsolę przeglądarki po więcej informacji.</div>;
   } else if (!isLoaded) {
-    return <div>Ładowanie...</div>;
+    return <div>Ładowanie... Stan: {loadingState}</div>;
   }
+
+
 
   if (httpError) {
     return (
