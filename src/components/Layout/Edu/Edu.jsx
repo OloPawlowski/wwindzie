@@ -3,9 +3,9 @@ import classes from "./Edu.module.css";
 import { FaThumbsDown, FaThumbsUp } from "react-icons/fa";
 
 const Edu = () => {
-  // const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [httpError, setHttpError] = useState(false);
-  // const [questions, setQuestions] = useState([]);
+  const [questions, setQuestions] = useState([]);
   const [current, setCurrent] = useState(0);
   const [showButton, setShowButton] = useState(false);
   const [score, setScore] = useState(0);
@@ -14,85 +14,23 @@ const Edu = () => {
   const [idNum, setIdNum] = useState(4);
   const numberOfQuestion = current + 1;
 
-  // const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [error, setError] = useState(null);
-  const [questions, setQuestions] = useState([]);
-  const [loadingState, setLoadingState] = useState('initial');
-
   const url = import.meta.env.VITE_REACT_APP_DATABASE;
 
-  // useEffect(() => {
-  //   const fetchQuestions = async () => {
-  //     const response = await fetch(url);
-  //     if (!response.ok) {
-  //       throw new Error("cosik poszło nie tak jak trza");
-  //     }
-  //     const responseData = await response.json();
-  //     setQuestions(responseData);
-  //     setIsLoaded(true);
-  //   };
-  //   fetchQuestions().catch((error) => {
-  //     setIsLoaded(false);
-  //     setHttpError(error.message);
-  //   });
-  // }, []);
   useEffect(() => {
     const fetchQuestions = async () => {
-      setLoadingState('fetching');
-      if (!url) {
-        console.error("URL jest niezdefiniowany. Sprawdź zmienną środowiskową VITE_REACT_APP_DATABASE.");
-        setError("Błąd konfiguracji: brak URL bazy danych");
-        setIsLoaded(true);
-        setLoadingState('error');
-        return;
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error("cosik poszło nie tak jak trza");
       }
-
-      try {
-        console.log("Próba pobrania danych z URL:", url);
-        const response = await fetch(url);
-        
-        setLoadingState('received response');
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const contentType = response.headers.get("content-type");
-        console.log("Otrzymany Content-Type:", contentType);
-
-        if (!contentType || !contentType.includes("application/json")) {
-          console.error("Nieoczekiwany typ zawartości:", contentType);
-          const textData = await response.text();
-          console.error("Otrzymane dane:", textData);
-          throw new Error(`Nieoczekiwany typ zawartości: ${contentType}`);
-        }
-
-        const jsonData = await response.json();
-        console.log("Sparsowane dane JSON:", jsonData);
-        setQuestions(jsonData);
-        setIsLoaded(true);
-        setLoadingState('loaded');
-      } catch (e) {
-        console.error("Błąd podczas pobierania lub przetwarzania danych:", e);
-        setError(e.message);
-        setIsLoaded(true);
-        setLoadingState('error');
-      }
+      const responseData = await response.json();
+      setQuestions(responseData);
+      setIsLoaded(true);
     };
-
-    fetchQuestions();
-  }, [url]);
-
-  console.log("Stan komponentu:", { isLoaded, error, loadingState, questionsLength: questions.length });
-
-  if (error) {
-    return <div>Błąd: {error}. Stan ładowania: {loadingState}. Sprawdź konsolę przeglądarki po więcej informacji.</div>;
-  } else if (!isLoaded) {
-    return <div>Ładowanie... Stan: {loadingState}</div>;
-  }
-
-
+    fetchQuestions().catch((error) => {
+      setIsLoaded(false);
+      setHttpError(error.message);
+    });
+  }, []);
 
   if (httpError) {
     return (
