@@ -21,7 +21,7 @@ jobs:
       run: npm ci
       
     - name: Build
-      run: npm run build 
+      run: npm run build  # To uruchomi 'vite build' zgodnie z Twoim package.json
       
     - name: Deploy to Cyberfolks using SFTP
       uses: appleboy/scp-action@master
