@@ -1,5 +1,5 @@
-import sterniczkaImage from '../../../../assets/sterniczka.png';
-import sternikImage from '../../../../assets/IMG_5501.png';
+import sterniczkaImage from '../../../../assets/sterniczka.webp';
+import sternikImage from '../../../../assets/IMG_5501.webp';
 import jachtImage from '../../../../assets/Agencja-zeglarska-W-windzie-w-przechyleniu.webp';
 import classes from './TrainingSubPage.module.css';
 import TrainingSubPageCard from './TrainingSubPageCard';

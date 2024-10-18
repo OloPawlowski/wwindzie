@@ -20,7 +20,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;  
-    margin: 2rem auto;
+    margin-top: 2rem;
+    margin-bottom: 1.65rem;
 }
 @media(min-width: 40rem) {
     .weather-pack_sub_section {

@@ -19,6 +19,7 @@
 }
 .loading p {
   margin: auto;
+  min-height: 26.9vh;
 }
 .intro {
   display: flex;

@@ -13,18 +13,18 @@ const Edu = () => {
   const [isAnswerTrue, setIsAnswerTrue] = useState(false);
   const [idNum, setIdNum] = useState(4);
   const numberOfQuestion = current + 1;
+  const [error, setError] = useState(null);
+  const [loadingState, setLoadingState] = useState("initial");
 
   const url = import.meta.env.VITE_REACT_APP_DATABASE;
 
-  const [error, setError] = useState(null);
-  const [loadingState, setLoadingState] = useState("initial");
 
   useEffect(() => {
     const fetchQuestions = async () => {
       setLoadingState("fetching");
       if (!url) {
         console.error(
-          "URL jest niezdefiniowany. Sprawdź VITE_REACT_APP_DATABASE.",
+          "URL jest niezdefiniowany.",
         );
         setError("Błąd konfiguracji: brak URL bazy danych");
         setIsLoaded(true);

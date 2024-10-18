@@ -1,10 +1,10 @@
 import WeatherItem from './WeatherItem';
-import imgwLogo from '../../../assets/IMGW.png';
-import icmLogo from '../../../assets/ICM.png';
-import ventuskyLogo from '../../../assets/Ventusky.png';
-import windfinderLogo from '../../../assets/Windfinder.png';
-import windyLogo from '../../../assets/WINDY.png';
-import yrLogo from '../../../assets/YR.png';
+import imgwLogo from '../../../assets/IMGW.webp';
+import icmLogo from '../../../assets/ICM.webp';
+import ventuskyLogo from '../../../assets/Ventusky.webp';
+import windfinderLogo from '../../../assets/Windfinder.webp';
+import windyLogo from '../../../assets/WINDY.webp';
+import yrLogo from '../../../assets/YR.webp';
 import Converter from './Converter/Converter';
 import { FaWind }  from 'react-icons/fa';
 import classes from './WeatherPack.module.css';
