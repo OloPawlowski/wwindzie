@@ -20,11 +20,10 @@
   background-color: #e9ecef; 
 }
 .footer hr {
-  width: 60%;
+  width: 60%; 
 }
 .content { 
   display: flex;
-  /* background-color: #e9ecef; */
   font-size: small;
 }
 .media-items {
