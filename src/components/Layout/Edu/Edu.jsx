@@ -14,23 +14,65 @@ const Edu = () => {
   const [idNum, setIdNum] = useState(4);
   const numberOfQuestion = current + 1;
 
+  const [error, setError] = useState(null);
+
   const url = import.meta.env.VITE_REACT_APP_BASE;
 
+  // useEffect(() => {
+  //   const fetchQuestions = async () => {
+  //     const response = await fetch(url);
+  //     if (!response.ok) {
+  //       throw new Error("cosik poszło nie tak jak trza");
+  //     }
+  //     const responseData = await response.json();
+  //     setQuestions(responseData);
+  //     setIsLoaded(true);
+  //   };
+  //   fetchQuestions().catch((error) => {
+  //     setIsLoaded(false);
+  //     setHttpError(error.message);
+  //   });
+  // }, []);
   useEffect(() => {
     const fetchQuestions = async () => {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error("cosik poszło nie tak jak trza");
+      try {
+        console.log("Próba pobrania danych z URL:", url);
+        const response = await fetch(url);
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const textData = await response.text(); 
+        console.log("Otrzymane surowe dane:", textData);
+
+        let jsonData;
+        try {
+          jsonData = JSON.parse(textData);
+        } catch (parseError) {
+          console.error("Błąd parsowania JSON:", parseError);
+          throw new Error(`Niepoprawny format JSON: ${parseError.message}`);
+        }
+
+        console.log("Sparsowane dane JSON:", jsonData);
+        setQuestions(jsonData);
+        setIsLoaded(true);
+      } catch (e) {
+        console.error("Błąd podczas pobierania lub przetwarzania danych:", e);
+        setError(e.message);
+        setIsLoaded(true);
       }
-      const responseData = await response.json();
-      setQuestions(responseData);
-      setIsLoaded(true);
     };
-    fetchQuestions().catch((error) => {
-      setIsLoaded(false);
-      setHttpError(error.message);
-    });
-  }, []);
+
+    fetchQuestions();
+  }, [url]);
+
+  if (error) {
+    return <div>Błąd: {error}</div>;
+  } else if (!isLoaded) {
+    return <div>Ładowanie...</div>;
+  }
+
 
   if (httpError) {
     return (
