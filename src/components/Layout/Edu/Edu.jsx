@@ -17,7 +17,6 @@ const Edu = () => {
   const [error, setError] = useState(null);
 
   const url = import.meta.env.VITE_REACT_APP_DATABASE;
-  console.log(url)
 
   // useEffect(() => {
   //   const fetchQuestions = async () => {
@@ -34,6 +33,8 @@ const Edu = () => {
   //     setHttpError(error.message);
   //   });
   // }, []);
+
+
   useEffect(() => {
     const fetchQuestions = async () => {
       if (!url) {
@@ -53,20 +54,13 @@ const Edu = () => {
 
         const contentType = response.headers.get("content-type");
         if (!contentType || !contentType.includes("application/json")) {
+          console.error("Nieoczekiwany typ zawartości:", contentType);
+          const textData = await response.text();
+          console.error("Otrzymane dane:", textData);
           throw new Error(`Nieoczekiwany typ zawartości: ${contentType}`);
         }
 
-        const textData = await response.text();
-        console.log("Otrzymane surowe dane:", textData);
-
-        let jsonData;
-        try {
-          jsonData = JSON.parse(textData);
-        } catch (parseError) {
-          console.error("Błąd parsowania JSON:", parseError);
-          throw new Error(`Niepoprawny format JSON: ${parseError.message}`);
-        }
-
+        const jsonData = await response.json();
         console.log("Sparsowane dane JSON:", jsonData);
         setQuestions(jsonData);
         setIsLoaded(true);
@@ -81,11 +75,10 @@ const Edu = () => {
   }, [url]);
 
   if (error) {
-    return <div>Błąd: {error}</div>;
+    return <div>Błąd: {error}. Sprawdź konsolę przeglądarki po więcej informacji.</div>;
   } else if (!isLoaded) {
     return <div>Ładowanie...</div>;
   }
-
 
   if (httpError) {
     return (
