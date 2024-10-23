@@ -13,15 +13,22 @@
       name="keywords"
       content="instruktor żeglarstwa, szkolenie żeglarskie, rejsy turystyczne"
     />
-    <meta name="author" content="Agencja Żeglarska 'W Windzie' Aleksander Pawłowski" />
+    <meta
+      name="author"
+      content="Agencja Żeglarska 'W Windzie' Aleksander Pawłowski"
+    />
     <link rel="apple-touch-icon" href="/wWindzie1.png" />
     <link rel="manifest" href="/manifest.json" />
     <title>Agencja Żeglarska W Windzie</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/index.jsx"></script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-S5EKC41QRS"
     ></script>
-    <script>
+    <script defer>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -30,9 +37,5 @@
 
       gtag("config", "G-S5EKC41QRS");
     </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/index.jsx"></script>    
   </body>
 </html>

@@ -8,7 +8,7 @@ const INSTRUCTORS = [
     id: "1",
     name: 'Aleksander Olo Pawłowski',
     photo: oloImage,
-    photoAlt: 'Alek.Pawłowski',
+    photoAlt: 'Aleksander Pawłowski instruktor żeglarstwa',
     licence1: 'Instruktor Żeglarstwa IŻ PZŻ',
     licence2: 'Jachtowy Sternik Morski',
     licence3: 'Motorowodny Sternik Morski',
@@ -22,6 +22,7 @@ const InstructorCards = () => {
       key={ins.id}
       name={ins.name}
       photo={ins.photo}
+      photoAlt={ins.photoAlt}
       licence1={ins.licence1}
       licence2={ins.licence2}
       licence3={ins.licence3}

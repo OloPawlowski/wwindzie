@@ -8,12 +8,11 @@
   background-color: #ffffff;
 }
 .training-subcontainer {
-  width: 100%;
   text-align: center;
   padding: 2rem;
-}
-.training_descript h2 p {
-  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  margin: auto; 
 }
 .descript1 {
   color: #1c75bc;
