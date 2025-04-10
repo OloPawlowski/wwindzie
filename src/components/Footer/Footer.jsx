@@ -11,22 +11,25 @@ const SOCIALMEDIALOGOS = [
     id: "facebook",
     logo: <FaFacebook className={classes["facebook-icon"]} />,
     link: "https://www.facebook.com/www.wwindzie/",
+    altText: "Visit Facebook",
   },
   {
     id: "youtube",
     logo: <FaYoutube className={classes["youtube-icon"]} />,
     link: "",
+    altText: "Visit Youtube",
   },
   {
     id: "twitter",
     logo: <FaTwitterSquare className={classes["twitter-icon"]} />,
     link: "",
+    altText: "Visit Twitter",
   },
 ];
 
 const Footer = () => {
   const socialMediaIcons = SOCIALMEDIALOGOS.map((medium) => (
-    <SocialMedia key={medium.id} logo={medium.logo} link={medium.link} />
+    <SocialMedia key={medium.id} logo={medium.logo} link={medium.link} altText={medium.altText}/>
   ));
 
   return (
