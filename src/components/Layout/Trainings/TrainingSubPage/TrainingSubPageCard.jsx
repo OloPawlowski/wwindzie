@@ -5,9 +5,9 @@ const TrainingSubPageCard = (props) => {
   return (
     <article className={classes.article}>
       <div className={classes['article-header']}>
-        <h4>{props.title}</h4>
+        <h3>{props.title}</h3>
       </div>
-      <h5>{props.subtitle}</h5>
+      <h4>{props.subtitle}</h4>
       <div className={classes['article_sub-container']}>
         <p>{props.content}</p>
       </div>

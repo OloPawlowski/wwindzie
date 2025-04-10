@@ -25,7 +25,7 @@ const MazurySubPage = () => {
             <img src={ogniskoImage} alt="dużo ludzi przy ognisku z gitarą w nocy"/>
         </div>
         <div className={classes['sub-article_list']}>
-          <h4>Co zabrać na rejs:</h4>
+          <h3>Co zabrać na rejs:</h3>
             <ul>
               {toPackItem}
             </ul>

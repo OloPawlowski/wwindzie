@@ -7,9 +7,9 @@ const Kontakt = () => {
   return (
     <article className={classes.article}>
       <div className={classes.card}>
-        <h4>zadzwoń:</h4>
+        <h3>zadzwoń:</h3>
         <p className={classes.contact}>
-          <a className={classes.link} href="tel:+48515802897">
+          <a className={classes.link} href="tel:+48515802897"  aria-label="Zadzwoń pod numer 515 802 897">
             <FaPhoneAlt className={classes.iconP} />
           </a>
           515 802 897
@@ -23,7 +23,7 @@ const Kontakt = () => {
         <p>Agencja Żeglarska "W Windzie" Aleksander Pawłowski</p>
         <p>ul. Obrońców Tobruku 38/133</p>
         <p>01-494 Warszawa</p>
-        <p>NIP 757 117 60 90</p>
+        {/* <p>NIP 757 117 60 90</p> */}
       </div>
     </article>
   );

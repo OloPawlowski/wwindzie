@@ -107,11 +107,11 @@ const WeatherPack = () => {
     <div className={classes['weather-pack']}>
       <div className={classes['weather-pack_sections']}>
         <div className={classes['weather-pack_sub_section']}>
-          <h4>dla Zalewu Zegrzyńskiego</h4>
+          <h3>dla Zalewu Zegrzyńskiego</h3>
           <div className={classes['weather-pack_section']}>{weatherZz}</div>
         </div>
         <div className={classes['weather-pack_sub_section']}>
-          <h4>dla Wielkich Jezior Mazurskich</h4>
+          <h3>dla Wielkich Jezior Mazurskich</h3>
           <div className={classes['weather-pack_section']}>{weatherWjm}</div>
         </div>
         <div className={classes.converter}>

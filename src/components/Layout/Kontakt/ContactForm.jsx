@@ -61,7 +61,7 @@ const ContactForm = () => {
   };
   return (
     <div className={classes["form-block"]}>
-      <h4>napisz do nas:</h4>
+      <h3>napisz do nas:</h3>
       <form onSubmit={SubmitHandler}>
         <div className={classes["form-inputs"]}>
           <div className={classes["form-input"]}>
