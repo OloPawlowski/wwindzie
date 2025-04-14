@@ -3,7 +3,7 @@ import classes from './Toggler.module.css';
 
 const Toggler = props => {
     return (
-        <button className={classes['toggle-button']} onClick={props.onShowMobileMenu}>
+        <button className={classes['toggle-button']} onClick={props.onShowMobileMenu} aria-label="rozwijane menu">
             <span className={classes['toggle-button_bar']}></span>
             <span className={classes['toggle-button_bar']}></span>
             <span className={classes['toggle-button_bar']}></span>
